@@ -1,1 +1,9 @@
-{{outlet}}
+<h2>New Hero Page</h2>
+
+<form {{action newHero on="submit"}} class="new-hero">
+  <div class="form-group">
+    <label for="">Hero Name</label>
+    {{input type="text" class="form-control" placeholder="New Hero's Name" value=name}}
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
