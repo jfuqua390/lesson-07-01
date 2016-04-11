@@ -43,14 +43,14 @@ export default Ember.Service.extend({
       return existing;
     }
 
-    return fetch(`https://tiny-tn.herokuapp.com/collections/heroes/${id}`)
+    return fetch(`${this.apiUrl}/${id}`)
       .then((res) => {
         return res.json();
       });
   },
 
   update(hero) {
-    return fetch(`https://tiny-tn.herokuapp.com/collections/heroes/${hero._id}`, {
+    return fetch(`${this.apiUrl}/${hero._id}`, {
       method: `PUT`,
       headers: {
         Accept: `application/json`,
