@@ -1,0 +1,15 @@
+{{outlet}}
+
+<h2>Vote for a hero</h2>
+<div class="row">
+  {{#each model as |hero|}}
+    <div class="col col-xs-4 col-md-3">
+      <p class="hero-grid-item">
+        {{#link-to "edit" hero._id}}{{hero.name}}{{/link-to}}
+      </p>
+      <button {{action likeHero hero}} class="btn btn-success">Like</button>
+      <button {{action dislikeHero hero}} class="btn btn-danger">Dislike</button>
+      <p class="hero-score">{{hero.score}}</p>
+    </div>
+  {{/each}}
+</div>

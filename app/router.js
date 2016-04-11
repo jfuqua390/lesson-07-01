@@ -10,6 +10,7 @@ Router.map(function() {
 
   this.route(`edit`, { path: `/:_id` });
   this.route(`heroes`);
+  this.route('vote');
 });
 
 export default Router;
